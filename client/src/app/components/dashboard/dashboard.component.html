@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="button-container">
+        <button mat-flat-button (click)="logout()" color="warn">Logout</button>
+    </div>
+    <div class="card-container">
+        <mat-card (click)="createNewDocument()" class="card">
+            <mat-card-content>
+                <img src="../../../assets/plus.png" alt="">
+                <h3>New doc</h3>
+            </mat-card-content>
+        </mat-card>
+        <mat-card (click)="openDocument()" class="card">
+            <mat-card-content>
+                <img src="../../../assets/docs.jpg" alt="docs">
+                <h3>doc-naem</h3>
+            </mat-card-content>
+            <mat-card-actions>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

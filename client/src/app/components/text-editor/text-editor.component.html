@@ -1,0 +1,7 @@
+<div class="document-name-container">
+    <mat-form-field>
+        <mat-label>Document Name</mat-label>
+        <input type="text" matInput (ngModelChange)="docNameChange($event)" [(ngModel)]="docName">
+    </mat-form-field>
+</div>
+<div id="quill-editor"></div>

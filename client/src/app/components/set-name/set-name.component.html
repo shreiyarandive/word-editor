@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Enter Name for document</h1>
+<div mat-dialog-content >
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput [(ngModel)]="data.docName">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-flat-button [mat-dialog-close]="data.docName" color="primary" cdkFocusIntial>Ok</button>
+</div>

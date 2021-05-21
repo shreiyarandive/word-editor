@@ -1,0 +1,25 @@
+.container {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+}
+.form-field{
+    display: block;
+}
+button {
+    left: 15%;
+    width: 300px;
+    display: block;
+    margin: 5px;
+    padding: 2px;
+}
+mat-icon{
+    margin: 4px;
+    padding: 2px;
+}

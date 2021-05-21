@@ -1,0 +1,45 @@
+<div class="trial">
+    <div class="container">
+        <form [formGroup]="registerForm" (ngSubmit)="submitForm()" novalidate>
+
+            <!-- Name -->
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-icon matPrefix>person</mat-icon>
+                    <input matInput placeholder="Name" type="text" formControlName="name">
+                    <mat-error *ngIf="registerForm.controls.name.touched && registerForm.controls.name.invalid">
+                        <span *ngIf="registerForm.controls.name.errors?.required">This Field is Mandatory</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-icon matPrefix>email</mat-icon>
+                    <input matInput placeholder="Email" type="email" formControlName="email">
+                    <mat-error *ngIf="registerForm.controls.email.touched && registerForm.controls.email.invalid">
+                        <span *ngIf="registerForm.controls.email.errors?.required">This Field is Mandatory</span>
+                        <span *ngIf="registerForm.controls.email.errors?.pattern">Please Enter a valid Email</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <!-- Password-->
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-icon matPrefix>password</mat-icon>
+                    <input matInput placeholder="Password" type="password" formControlName="password">
+                    <mat-error *ngIf="registerForm.controls.password.touched && registerForm.controls.password.touched">
+                        <span *ngIf="registerForm.controls.password.errors?.required">Please enter a password</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <!-- Submit Button-->
+            <div class="button-wrapper">
+                <button mat-flat-button color="primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
